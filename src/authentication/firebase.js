@@ -8,12 +8,12 @@ import {
 } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBlicMVKXAq0W7h0bgjvlyWlVvwoiXSwfA',
-  authDomain:  'pair-95-dts-mini-project.firebaseapp.com',
-  projectId:  'pair-95-dts-mini-project',
-  storageBucket: 'pair-95-dts-mini-project.appspot.com',
-  messagingSenderId:  '286564724986',
-  appId: '1:286564724986:web:fecbf140ef5b3fee531943',
+  apiKey: "AIzaSyBlicMVKXAq0W7h0bgjvlyWlVvwoiXSwfA",
+  authDomain: "pair-95-dts-mini-project.firebaseapp.com",
+  projectId: "pair-95-dts-mini-project",
+  storageBucket: "pair-95-dts-mini-project.appspot.com",
+  messagingSenderId: "286564724986",
+  appId: "1:286564724986:web:fecbf140ef5b3fee531943",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -33,9 +33,10 @@ const registerWithEmailAndPassword = async (email, password) => {
       password
     );
 
-    return response.user;
+    console.log(
+      response.user
+    );
   } catch (error) {
-    console.log(error.code);
     console.log(error.message);
   }
 };
@@ -44,8 +45,8 @@ const loginWithEmailAndPassword = async (email, password) => {
   // See : https://firebase.google.com/docs/auth/web/password-auth#sign_in_a_user_with_an_email_address_and_password
 
   try {
-    const userCredential = await signInWithEmailAndPassword(email, password);
-    return userCredential.user;
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    console.log(userCredential);
   } catch (error) {
     console.log(error.code);
     console.log(error.message);
