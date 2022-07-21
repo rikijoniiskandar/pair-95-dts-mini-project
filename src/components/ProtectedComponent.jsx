@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
 
 import { useNavigate } from 'react-router-dom'
 import { useAuthState } from 'react-firebase-hooks/auth'
 
 import { auth } from '../authentication/firebase'
+import { useEffect } from 'react';
 
 const ProtectedComponent = ({ children }) => {
   const navigate = useNavigate();
