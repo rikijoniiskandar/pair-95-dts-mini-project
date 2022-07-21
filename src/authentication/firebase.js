@@ -8,12 +8,12 @@ import {
 } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  projectId: process.env.PROJECT_ID,
-  storageBucket: process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.MESSAGING_SENDER_ID,
-  appId: process.env.APP_ID,
+  apiKey: 'AIzaSyBlicMVKXAq0W7h0bgjvlyWlVvwoiXSwfA',
+  authDomain:  'pair-95-dts-mini-project.firebaseapp.com',
+  projectId:  'pair-95-dts-mini-project',
+  storageBucket: 'pair-95-dts-mini-project.appspot.com',
+  messagingSenderId:  '286564724986',
+  appId: '1:286564724986:web:fecbf140ef5b3fee531943',
 };
 
 const app = initializeApp(firebaseConfig);
