@@ -1,14 +1,12 @@
-import { Box } from '@mui/material';
-import React from 'react'
+import { useEffect } from "react";
+import LoginOrRegisterForm from "../../components/LoginOrRegisterForm";
+
 
 const RegisterPage = () => {
-  return (
-    <>
-      <Box ex={{marginTop: '180px'}}>
-        Halaman Register
-      </Box>
-    </>
-  )
-}
+  useEffect(() => {
+    document.title = "Register --- Movie"
+  })
+  return <LoginOrRegisterForm loginOrRegister={"register"} />;
+};
 
 export default RegisterPage;

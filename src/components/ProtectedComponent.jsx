@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 
 import { auth } from '../authentication/firebase'
 import { useEffect } from 'react';
+import SplashComponent from './SplashComponent';
 
 const ProtectedComponent = ({ children }) => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const ProtectedComponent = ({ children }) => {
   }, [user, navigate])
 
   if (isLoading) {
-    return;
+    return (<SplashComponent />)
   } else {
     return children
   }

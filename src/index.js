@@ -4,11 +4,11 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-import LoginPage from "./pages/auth/LoginPage";
-import RegisterPage from "./pages/auth/RegisterPage";
 import ProtectedComponent from "./components/ProtectedComponent";
 import { ThemeProvider } from "@mui/material";
 import themes from "./theme";
+import LoginPage from "./pages/auth/LoginPage";
+import RegisterPage from "./pages/auth/RegisterPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

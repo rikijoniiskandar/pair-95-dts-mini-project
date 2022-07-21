@@ -1,23 +1,17 @@
-import { Box } from '@mui/material';
-import React from 'react'
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { Box, Container } from '@mui/material';
+import { useEffect } from 'react'
 
-import { auth } from '../../authentication/firebase';
 
 const HomeIndex = () => {
-  const [user] = useAuthState(auth)
+  useEffect(() => {
+    document.title = 'Home --- Movie'
+  })
   return (
-    <Box>
-      {
-        user ? (
-          <div>
-            <div>Email : {user.email}</div>
-            <div>uid : {user.uid}</div>
-          </div>
-        ) : (
-          ""
-        )
-      }
+    <Box sx={{ color: '#fff', marginTop: '70px' }}>
+      <Container>
+        Welcome to Movie App
+      </Container>
+
     </Box>
   )
 }
